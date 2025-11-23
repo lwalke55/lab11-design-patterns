@@ -7,6 +7,12 @@ entities with desired values.
 
 ![Anonymizer Design](../docs/assets/anonymizer-design.png)
 
+### Lab 11 Questions
+
+if/elif branch count: 2
+Python data structure used: dict
+This code exhibits Strategy pattern design by limiting its use of selecting operators to 2 if branches. there are more classes than maybe needed but allows for the code to be easily extended with minor adjustments to classes that need an import here and there.
+
 ### Deploy Presidio anonymizer to Azure
 
 Use the following button to deploy presidio anonymizer to your Azure subscription.
