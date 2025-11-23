@@ -11,10 +11,10 @@ def run_anonymizer(operator_name: str, params: Dict = None):
     # analyzer results (potentially coming from presidio-analyzer) and
     # Operators to get the anonymization output:
     result = engine.anonymize(
-        text="My name is Bond, James Bond",
+        text="John Smith",
         analyzer_results=[
-            RecognizerResult(entity_type="PERSON", start=11, end=15, score=0.8),
-            RecognizerResult(entity_type="PERSON", start=17, end=27, score=0.8),
+            RecognizerResult(entity_type="PERSON", start=0, end=4, score=0.8),
+            RecognizerResult(entity_type="PERSON", start=5, end=10, score=0.8),
         ],
         operators={"PERSON": OperatorConfig(operator_name, params)},
     )

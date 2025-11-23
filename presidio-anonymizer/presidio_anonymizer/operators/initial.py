@@ -9,17 +9,18 @@ class Initial(Operator):
         textarr = text.split()
         initials = ""
         for i in textarr:
-            #if i[0][0] == char:
             counter = 0
-            for j in textarr[len(textarr) - 1][counter]:
+            for j in i:
                 if j.isalnum():
                     if i == textarr[len(textarr) - 1]:
-                        initials += i[0] + "."
+                        initials += j + "."
+                        break
                     else:
-                        initials += i[0] + ". "
-                counter += 1
-                if counter == textarr[len(textarr) - 1]:
-                    break
+                        initials += j + ". "
+                        break
+                else:
+                    initials += j
+                    counter += 1
         initials = initials.upper()
 
         return initials
